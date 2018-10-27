@@ -1,8 +1,12 @@
 package pl.sda.intermediate12;
 
 
+import lombok.AccessLevel;
+import lombok.Getter;
+
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -12,6 +16,7 @@ import java.util.Map;
 
 public class InMemoryCategoryDAO {
     private static InMemoryCategoryDAO instance;
+    @Getter
     private List<Category> categoryList;
 
     private InMemoryCategoryDAO() {
@@ -22,7 +27,7 @@ public class InMemoryCategoryDAO {
         try {
             List<String> strings = Files.readAllLines(Paths.get(
                     this.getClass().getClassLoader()
-                            .getResource("kategorie.txt").toURI()));
+                            .getResource("kategorie.txt").toURI()), Charset.forName("UNICODE"));
             List<Category> categories = new ArrayList<>();
 
             int counter = 1;
@@ -32,7 +37,6 @@ public class InMemoryCategoryDAO {
                         .id(counter++)
                         .depth(calculateDepth(line))
                         .build());
-
             }
 
             Map<Integer, List<Category>> categoryMap = new HashMap<>();
@@ -78,7 +82,10 @@ public class InMemoryCategoryDAO {
 
 
     private int calculateDepth(String line) {
-        return line.split("\\S")[0].length();
+        if(line.startsWith(" ")){
+            return line.split("\\S")[0].length();
+        }
+        return 0;
     }
 
     public static InMemoryCategoryDAO getInstance() {
