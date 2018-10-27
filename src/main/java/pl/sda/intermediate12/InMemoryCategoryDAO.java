@@ -32,7 +32,6 @@ public class InMemoryCategoryDAO {
                         .id(counter++)
                         .depth(calculateDepth(line))
                         .build());
-
             }
 
             Map<Integer, List<Category>> categoryMap = new HashMap<>();
