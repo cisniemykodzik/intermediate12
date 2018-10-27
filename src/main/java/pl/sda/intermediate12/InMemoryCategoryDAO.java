@@ -75,8 +75,7 @@ public class InMemoryCategoryDAO {
         }
         populateParentID(categoryMap, ++depth);
     }
-
-
+    
     private int calculateDepth(String line) {
         return line.split("\\S")[0].length();
     }
