@@ -3,6 +3,7 @@ package pl.sda.intermediate12;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ public class InMemoryCategoryDAO {
         try {
             List<String> strings = Files.readAllLines(Paths.get(
                     this.getClass().getClassLoader()
-                            .getResource("kategorie.txt").toURI()));
+                            .getResource("kategorie.txt").toURI()), Charset.forName("UTF-8"));
             List<Category> categories = new ArrayList<>();
 
             int counter = 1;
