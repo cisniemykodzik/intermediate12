@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c92f95c3-f162-4e96-89a7-bc0fd51ae06f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/sda/intermediate12/Countries.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/sda/intermediate12/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/BadHashCodeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/ProteinesChecker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/proteines.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/StreamsAndLambdasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/StreamsAndLambdasTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,10 +17,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/StreamsAndLambdasTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="56" column="25" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="25" />
+            <state relative-caret-position="527">
+              <caret line="139" column="5" lean-forward="true" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3302#3303#0" expanded="true" />
+                <element signature="e#4053#4054#0" expanded="true" />
+                <element signature="e#4093#4094#0" expanded="true" />
+                <element signature="e#4315#4316#0" expanded="true" />
+                <element signature="e#4351#4352#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -131,7 +129,7 @@
     <property name="LombokPluginEnabledInProject" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540732798801" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540734282822" />
     <property name="full.screen.before.presentation.mode" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -262,7 +260,7 @@
       <updated>1540628319367</updated>
       <workItem from="1540628325802" duration="5476000" />
       <workItem from="1540721537884" duration="7439000" />
-      <workItem from="1540729976159" duration="2291000" />
+      <workItem from="1540729976159" duration="5719000" />
     </task>
     <servers />
   </component>
@@ -299,7 +297,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27993000" />
+    <option name="totallyTimeSpent" value="31421000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -546,12 +544,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/function/Function.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/StreamsAndLambdasTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="56" column="25" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="25" />
+        <state relative-caret-position="527">
+          <caret line="139" column="5" lean-forward="true" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3302#3303#0" expanded="true" />
+            <element signature="e#4053#4054#0" expanded="true" />
+            <element signature="e#4093#4094#0" expanded="true" />
+            <element signature="e#4315#4316#0" expanded="true" />
+            <element signature="e#4351#4352#0" expanded="true" />
           </folding>
         </state>
       </provider>
