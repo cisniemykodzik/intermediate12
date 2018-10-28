@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c92f95c3-f162-4e96-89a7-bc0fd51ae06f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/StreamsAndLambdasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/StreamsAndLambdasTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/threads/ThreadsExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -15,17 +16,15 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/StreamsAndLambdasTest.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/threads/ThreadsExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="139" column="5" lean-forward="true" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
+            <state relative-caret-position="613">
+              <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3302#3303#0" expanded="true" />
-                <element signature="e#4053#4054#0" expanded="true" />
-                <element signature="e#4093#4094#0" expanded="true" />
-                <element signature="e#4315#4316#0" expanded="true" />
-                <element signature="e#4351#4352#0" expanded="true" />
+                <element signature="e#314#315#0" expanded="true" />
+                <element signature="e#358#359#0" expanded="true" />
+                <element signature="e#493#494#0" expanded="true" />
+                <element signature="e#537#538#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,6 +67,7 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/sda/intermediate12/Main.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/StreamsAndLambdasTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/threads/ThreadsExample.java" />
       </list>
     </option>
   </component>
@@ -107,7 +107,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -117,19 +116,76 @@
             </path>
             <path>
               <item name="intermediate12" type="b2602c69:ProjectViewProjectNode" />
+              <item name="intermediate12" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="intermediate12" type="b2602c69:ProjectViewProjectNode" />
+              <item name="intermediate12" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="intermediate12" type="b2602c69:ProjectViewProjectNode" />
+              <item name="intermediate12" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="intermediate12" type="b2602c69:ProjectViewProjectNode" />
+              <item name="intermediate12" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediate12" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="intermediate12" type="b2602c69:ProjectViewProjectNode" />
+              <item name="intermediate12" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="intermediate12" type="b2602c69:ProjectViewProjectNode" />
+              <item name="intermediate12" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="intermediate12" type="b2602c69:ProjectViewProjectNode" />
+              <item name="intermediate12" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediate12" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="intermediate12" type="b2602c69:ProjectViewProjectNode" />
+              <item name="intermediate12" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediate12" type="462c0819:PsiDirectoryNode" />
+              <item name="threads" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="intermediate12" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="LombokPluginEnabledInProject" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540734282822" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540739087072" />
     <property name="full.screen.before.presentation.mode" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -139,12 +195,15 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="pl.sda.intermediate12" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="pl.sda.intermediate12" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\projects\12\mycode\intermediate12\src\test\resources" />
       <recent name="C:\projects\12\mycode\intermediate12\src\main\resources" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="pl.sda.intermediate12" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -159,7 +218,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.StreamsAndLambdasTest.lambdas1">
+  <component name="RunManager" selected="JUnit.ThreadsExample.runnableBasics">
     <configuration name="BadHashCodeTest.checkIfObjectsWithBadHashCodeImplementationCanBeAddedTwicelyToSet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="intermediate12" />
       <extension name="coverage">
@@ -171,22 +230,6 @@
       <option name="PACKAGE_NAME" value="pl.sda.intermediate12" />
       <option name="MAIN_CLASS_NAME" value="pl.sda.intermediate12.BadHashCodeTest" />
       <option name="METHOD_NAME" value="checkIfObjectsWithBadHashCodeImplementationCanBeAddedTwicelyToSet" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CategoryParseTest.checkParseOK" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="intermediate12" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pl.sda.intermediate12.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pl.sda.intermediate12" />
-      <option name="MAIN_CLASS_NAME" value="pl.sda.intermediate12.CategoryParseTest" />
-      <option name="METHOD_NAME" value="checkParseOK" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -238,13 +281,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ThreadsExample.runnableBasics" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="intermediate12" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.sda.intermediate12.threads.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.sda.intermediate12.threads" />
+      <option name="MAIN_CLASS_NAME" value="pl.sda.intermediate12.threads.ThreadsExample" />
+      <option name="METHOD_NAME" value="runnableBasics" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ThreadsExample.runnableBasics" />
         <item itemvalue="JUnit.StreamsAndLambdasTest.lambdas1" />
         <item itemvalue="JUnit.ProteinesChecker.parseAndCheck" />
         <item itemvalue="JUnit.ProteinesChecker" />
         <item itemvalue="JUnit.BadHashCodeTest.checkIfObjectsWithBadHashCodeImplementationCanBeAddedTwicelyToSet" />
-        <item itemvalue="JUnit.CategoryParseTest.checkParseOK" />
       </list>
     </recent_temporary>
   </component>
@@ -260,14 +319,11 @@
       <updated>1540628319367</updated>
       <workItem from="1540628325802" duration="5476000" />
       <workItem from="1540721537884" duration="7439000" />
-      <workItem from="1540729976159" duration="5719000" />
+      <workItem from="1540729976159" duration="7626000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ProteinesChecker_parseAndCheck - 2018.10.28 at 11h 13m 35s.xml">
-      <configuration name="ProteinesChecker.parseAndCheck" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ProteinesChecker_parseAndCheck - 2018.10.28 at 11h 14m 26s.xml">
       <configuration name="ProteinesChecker.parseAndCheck" configurationId="JUnit" />
     </history-entry>
@@ -295,9 +351,12 @@
     <history-entry file="StreamsAndLambdasTest_lambdas1 - 2018.10.28 at 13h 57m 41s.xml">
       <configuration name="StreamsAndLambdasTest.lambdas1" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ThreadsExample_runnableBasics - 2018.10.28 at 15h 59m 31s.xml">
+      <configuration name="ThreadsExample.runnableBasics" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31421000" />
+    <option name="totallyTimeSpent" value="33328000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -317,7 +376,7 @@
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.38375" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.38375" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.31375" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
@@ -562,6 +621,19 @@
             <element signature="e#4093#4094#0" expanded="true" />
             <element signature="e#4315#4316#0" expanded="true" />
             <element signature="e#4351#4352#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/threads/ThreadsExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+          <folding>
+            <element signature="e#314#315#0" expanded="true" />
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
           </folding>
         </state>
       </provider>
