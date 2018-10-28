@@ -1,10 +1,13 @@
 package pl.sda.intermediate12;
 
+import lombok.Getter;
+import lombok.ToString;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class StreamsAndLambdasTest {
@@ -38,8 +41,30 @@ public class StreamsAndLambdasTest {
                 .map(animal -> animal.trim())
                 .sorted(Comparator.reverseOrder())
                 .collect(Collectors.joining(", ","",".")));
-    }
 
+        System.out.println(people.stream()
+                .filter(p -> p.getName().startsWith("A"))
+                .map(e -> e.getName().toUpperCase())
+                .distinct()
+                .sorted((a,b) -> String.valueOf(a.charAt(a.length()-1)).compareTo(String.valueOf(b.charAt(b.length()-1))))
+                .collect(Collectors.joining(", ")));
+
+        System.out.println(people.stream()
+                .sorted((l, m) -> l.getAge().compareTo(m.getAge()))
+                .map(a -> a.getName() + " " + a.getSurname())
+                .collect(Collectors.joining(", ")));
+
+        Map<Integer, List<PersonForTest>> collect1 = people.stream()
+                .collect(Collectors.groupingBy(e -> e.getAge()));
+        System.out.println(collect1);
+
+        Map<Integer, PersonForTest> collect = people.stream()
+                .collect(Collectors.toMap(e -> e.getIndex(), v -> v));
+
+
+    }
+    @Getter
+    @ToString
     private class PersonForTest {
         private final Integer index;
         private final String name;
@@ -53,4 +78,5 @@ public class StreamsAndLambdasTest {
             this.age = age;
         }
     }
+
 }

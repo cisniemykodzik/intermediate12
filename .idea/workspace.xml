@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c92f95c3-f162-4e96-89a7-bc0fd51ae06f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/StreamsAndLambdasTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/sda/intermediate12/Countries.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/sda/intermediate12/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/BadHashCodeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/ProteinesChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/proteines.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/StreamsAndLambdasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/StreamsAndLambdasTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -18,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/StreamsAndLambdasTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
+            <state relative-caret-position="330">
+              <caret line="56" column="25" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -32,9 +38,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindBugs-IDEA-Workspace">
+    <toolWindowEditorPreview>false</toolWindowEditorPreview>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -47,10 +57,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sda/intermediate12/Category.java" />
         <option value="$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/CategoryParseTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sda/intermediate12/InMemoryCategoryDAO.java" />
+        <option value="$PROJECT_DIR$/../../../webdemo/src/main/java/com/example/bookstore/categories/SelectCategoriesService.java" />
+        <option value="$PROJECT_DIR$/../../../webdemo/src/main/java/com/example/bookstore/categories/FilterOutCategoriesService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/BadHashCodeTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/sda/intermediate12/Countries.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/proteines.txt" />
+        <option value="$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/ProteinesChecker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/sda/intermediate12/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/sda/intermediate12/Main.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/StreamsAndLambdasTest.java" />
       </list>
     </option>
@@ -62,11 +80,25 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="intermediate12" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="intermediate12" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -76,65 +108,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="intermediate12" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intermediate12" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intermediate12" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intermediate12" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intermediate12" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intermediate12" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intermediate12" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intermediate12" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intermediate12" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intermediate12" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="intermediate12" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intermediate12" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intermediate12" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intermediate12" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intermediate12" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intermediate12" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intermediate12" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intermediate12" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intermediate12" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="intermediate12" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -145,21 +125,24 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="LombokPluginEnabledInProject" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540649324069" />
-    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540732798801" />
+    <property name="full.screen.before.presentation.mode" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projects\12\mycode\intermediate12\src\test\resources" />
       <recent name="C:\projects\12\mycode\intermediate12\src\main\resources" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
@@ -179,7 +162,7 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.StreamsAndLambdasTest.lambdas1">
-    <configuration name="CategoryParseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BadHashCodeTest.checkIfObjectsWithBadHashCodeImplementationCanBeAddedTwicelyToSet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="intermediate12" />
       <extension name="coverage">
         <pattern>
@@ -188,7 +171,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="pl.sda.intermediate12" />
-      <option name="MAIN_CLASS_NAME" value="pl.sda.intermediate12.CategoryParseTest" />
+      <option name="MAIN_CLASS_NAME" value="pl.sda.intermediate12.BadHashCodeTest" />
+      <option name="METHOD_NAME" value="checkIfObjectsWithBadHashCodeImplementationCanBeAddedTwicelyToSet" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -204,6 +189,36 @@
       <option name="PACKAGE_NAME" value="pl.sda.intermediate12" />
       <option name="MAIN_CLASS_NAME" value="pl.sda.intermediate12.CategoryParseTest" />
       <option name="METHOD_NAME" value="checkParseOK" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProteinesChecker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="intermediate12" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.sda.intermediate12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.sda.intermediate12" />
+      <option name="MAIN_CLASS_NAME" value="pl.sda.intermediate12.ProteinesChecker" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProteinesChecker.parseAndCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="intermediate12" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.sda.intermediate12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.sda.intermediate12" />
+      <option name="MAIN_CLASS_NAME" value="pl.sda.intermediate12.ProteinesChecker" />
+      <option name="METHOD_NAME" value="parseAndCheck" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -228,8 +243,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.StreamsAndLambdasTest.lambdas1" />
+        <item itemvalue="JUnit.ProteinesChecker.parseAndCheck" />
+        <item itemvalue="JUnit.ProteinesChecker" />
+        <item itemvalue="JUnit.BadHashCodeTest.checkIfObjectsWithBadHashCodeImplementationCanBeAddedTwicelyToSet" />
         <item itemvalue="JUnit.CategoryParseTest.checkParseOK" />
-        <item itemvalue="JUnit.CategoryParseTest" />
       </list>
     </recent_temporary>
   </component>
@@ -244,48 +261,81 @@
       <option name="presentableId" value="Default" />
       <updated>1540628319367</updated>
       <workItem from="1540628325802" duration="5476000" />
+      <workItem from="1540721537884" duration="7439000" />
+      <workItem from="1540729976159" duration="2291000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StreamsAndLambdasTest_lambdas1 - 2018.10.27 at 15h 42m 26s.xml">
+    <history-entry file="ProteinesChecker_parseAndCheck - 2018.10.28 at 11h 13m 35s.xml">
+      <configuration name="ProteinesChecker.parseAndCheck" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProteinesChecker_parseAndCheck - 2018.10.28 at 11h 14m 26s.xml">
+      <configuration name="ProteinesChecker.parseAndCheck" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProteinesChecker_parseAndCheck - 2018.10.28 at 11h 25m 08s.xml">
+      <configuration name="ProteinesChecker.parseAndCheck" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProteinesChecker - 2018.10.28 at 11h 28m 06s.xml">
+      <configuration name="ProteinesChecker" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProteinesChecker_parseAndCheck - 2018.10.28 at 11h 30m 51s.xml">
+      <configuration name="ProteinesChecker.parseAndCheck" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StreamsAndLambdasTest_lambdas1 - 2018.10.28 at 13h 07m 54s.xml">
       <configuration name="StreamsAndLambdasTest.lambdas1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StreamsAndLambdasTest_lambdas1 - 2018.10.27 at 15h 42m 59s.xml">
+    <history-entry file="StreamsAndLambdasTest_lambdas1 - 2018.10.28 at 13h 09m 35s.xml">
       <configuration name="StreamsAndLambdasTest.lambdas1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StreamsAndLambdasTest_lambdas1 - 2018.10.27 at 15h 47m 48s.xml">
+    <history-entry file="StreamsAndLambdasTest_lambdas1 - 2018.10.28 at 13h 20m 06s.xml">
       <configuration name="StreamsAndLambdasTest.lambdas1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StreamsAndLambdasTest_lambdas1 - 2018.10.27 at 15h 49m 23s.xml">
+    <history-entry file="StreamsAndLambdasTest_lambdas1 - 2018.10.28 at 13h 32m 15s.xml">
       <configuration name="StreamsAndLambdasTest.lambdas1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StreamsAndLambdasTest_lambdas1 - 2018.10.27 at 15h 52m 59s.xml">
-      <configuration name="StreamsAndLambdasTest.lambdas1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StreamsAndLambdasTest_lambdas1 - 2018.10.27 at 15h 54m 55s.xml">
-      <configuration name="StreamsAndLambdasTest.lambdas1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StreamsAndLambdasTest_lambdas1 - 2018.10.27 at 15h 56m 32s.xml">
-      <configuration name="StreamsAndLambdasTest.lambdas1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StreamsAndLambdasTest_lambdas1 - 2018.10.27 at 15h 57m 45s.xml">
-      <configuration name="StreamsAndLambdasTest.lambdas1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StreamsAndLambdasTest_lambdas1 - 2018.10.27 at 15h 58m 04s.xml">
-      <configuration name="StreamsAndLambdasTest.lambdas1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StreamsAndLambdasTest_lambdas1 - 2018.10.27 at 15h 59m 16s.xml">
+    <history-entry file="StreamsAndLambdasTest_lambdas1 - 2018.10.28 at 13h 57m 41s.xml">
       <configuration name="StreamsAndLambdasTest.lambdas1" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10869000" />
+    <option name="totallyTimeSpent" value="27993000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Designer" order="0" />
+      <window_info id="UI Designer" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info content_ui="combo" id="Project" order="5" weight="0.38359374" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.16375" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="3" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" />
+      <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.38375" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.31375" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="right" id="Theme Preview" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Palette&#9;" order="2" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.59765625" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Commander" order="6" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+    </layout>
+    <layout-to-restore>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
@@ -300,39 +350,8 @@
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.45125" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.5149786" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.31375" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="bottom" id="Messages" order="12" />
-      <window_info anchor="right" id="Theme Preview" order="0" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Palette&#9;" order="2" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Palette" order="5" />
-      <window_info anchor="right" id="Commander" order="6" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Designer" order="0" />
-      <window_info id="UI Designer" order="1" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.21440129" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="FindBugs-IDEA" order="3" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.30875" />
-      <window_info anchor="bottom" id="Debug" order="8" visible="true" weight="0.31375" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" />
@@ -368,27 +387,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="62" column="17" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sda/intermediate12/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/kategorie.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -398,7 +396,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/sda/intermediate12/InMemoryCategoryDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
+        <state relative-caret-position="594">
           <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -410,20 +408,229 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/CategoryParseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
+        <state relative-caret-position="734">
           <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/StreamsAndLambdasTest.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
+        <state relative-caret-position="266">
+          <caret line="110" column="21" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="385" column="35" lean-forward="true" selection-start-line="385" selection-start-column="35" selection-end-line="385" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/BadHashCodeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/proteines.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="262" column="23" selection-start-line="262" selection-start-column="23" selection-end-line="262" selection-end-column="23" />
+          <folding>
+            <element signature="e#10659#10660#0" expanded="true" />
+            <element signature="e#10730#10731#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="147" column="19" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
+          <folding>
+            <element signature="e#5748#5749#0" expanded="true" />
+            <element signature="e#5784#5785#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/ProteinesChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="18" column="40" selection-start-line="18" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sda/intermediate12/Countries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sda/intermediate12/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sda/intermediate12/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#95#96#0" expanded="true" />
+            <element signature="e#159#160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="5101" column="54" lean-forward="true" selection-start-line="5101" selection-start-column="54" selection-end-line="5101" selection-end-column="54" />
+          <folding>
+            <element signature="e#197058#197059#0" expanded="true" />
+            <element signature="e#197128#197129#0" expanded="true" />
+            <element signature="e#199575#199576#0" expanded="true" />
+            <element signature="e#199625#199626#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/Comparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="338" column="32" selection-start-line="338" selection-start-column="32" selection-end-line="338" selection-end-column="32" />
+          <folding>
+            <element signature="e#14106#14107#0" expanded="true" />
+            <element signature="e#14155#14156#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-263">
+          <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/lang/Comparable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-857">
+          <caret line="95" column="17" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="111" column="42" lean-forward="true" selection-start-line="111" selection-start-column="37" selection-end-line="111" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/sda/intermediate12/StreamsAndLambdasTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="56" column="25" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>intermediate12</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: org.apiguardian:apiguardian-api:1.0.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
