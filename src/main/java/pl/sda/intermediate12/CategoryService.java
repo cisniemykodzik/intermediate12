@@ -11,7 +11,7 @@ public class CategoryService {
         return categoryList.stream()
                 .map(c -> buildCategoryDTO(c))
                 .peek(dto -> dto.setParentCat(findParent(dto.getParentId())))
-                .map(dto -> populateStateAndOpenParents(dto, searchText))
+                .map(dto -> populateStateAndOpenParents(dto, searchText.trim()))
                 .collect(Collectors.toList());
 
     }
