@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>jsTree test</title>
+    <!-- 2 load the theme CSS file -->
+    <div th:replace="fragments/header :: header-css"/>
+</head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css"/>
+</head>
+<body>
+<div th:replace="fragments/header :: header"/>
+        <form action="/categories">
+            <input type="text" name="searchText">
+            <button value="search"> szukaj</button>
+        </form>
+        <div id="container"></div>
+<!--<div th:replace="fragments/footer :: footer"></div>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+<script type="text/javascript"
+        src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script th:inline="javascript">
+
+    $(function () {
+
+        $('#container').jstree({
+            'core': {
+                'data':
+                    [[${catsdata}]],
+                "check_callback": true
+
+            }
+            , // so that operations work
+            "plugins": ["dnd"]
+            //     "contextmenu", "dnd", "search",
+            //     "state"/*, "types", "wholerow"*/
+            // ]
+        })
+        $('#container').on('move_node.jstree', function (e, data) {
+            console.log(data)
+            $.post("/moveCat", {newParentId: data.parent, movedId: data.node.id})
+        })
+    });
+
+</script>
+
+</body>
+</html>

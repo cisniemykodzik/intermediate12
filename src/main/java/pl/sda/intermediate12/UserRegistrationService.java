@@ -1,10 +1,14 @@
 package pl.sda.intermediate12;
 
 import org.apache.commons.codec.digest.DigestUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserRegistrationService {
 
-    private UserDAO userDao = new UserDAO();
+    @Autowired
+    private UserDAO userDao;
 
     public void registerUser(UserRegistrationDTO userRegistrationDTO) {
         if ( userDao.checkIfUserExist(userRegistrationDTO.getEMail())){

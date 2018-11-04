@@ -1,7 +1,10 @@
 package pl.sda.intermediate12;
 
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
+@Service
 public class UserDAO {
     private List<User> userList;
 

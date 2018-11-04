@@ -1,7 +1,13 @@
 package pl.sda.intermediate12;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.concurrent.ForkJoinPool;
+
+@SpringBootApplication
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hejka "+args[0]+" "+args[1]);
+        SpringApplication.run(Main.class);
     }
 }
