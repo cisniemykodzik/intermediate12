@@ -1,0 +1,67 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<div th:fragment="footer">
+
+    <div class="container">
+
+        <footer>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+            <script type="text/javascript"
+                    src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        </footer>
+    </div>
+    <script>
+        var openweathermap = $("#openweathermap-widget");
+        $.getJSON("/weather")
+            .success(
+                function (response) {
+                    console.log(response.data)
+                    openweathermap.find(".weather-right-card__temperature-min").text((response.main.temp_min) + '°C')
+                    openweathermap.find(".weather-right-card__temperature-max").text((response.main.temp_max) + '°C')
+                    openweathermap.find(".widget-right__description").text((response.weather[0].description))
+                    $("#weather-image").attr('src', '//openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/' + response.weather[0].icon + '.png')
+                    openweathermap.find(".widget-right__title").text((response.name) + ', ' + response.sys.country)
+                }
+            )
+            .error(function (response) {
+                console.log(response.responseText)
+                    $("#weather-image").attr('src', 'https://us.123rf.com/450wm/martialred/martialred1507/martialred150700957/42621684-ungl%C3%BCcklich-oder-traurig-smiley-symbol-f%C3%BCr-apps-und-websites.jpg?ver=6')
+                    openweathermap.find(".widget-right__description").text((response.responseText))
+                }
+            )
+
+
+        $(function () {
+            console.log("sagrg")
+        })
+        $.ajax({
+            url: "/cartElements",
+
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                var orderLines = data.orderLines;
+                var items = "";
+                for (o in orderLines) {
+                    console.log("FAGGR"+o);
+                    items += items.concat("<li>"+o.product.name+"</li>")
+                }
+
+
+                $('#toReplace').html(items);
+            },
+            error: function (data) {
+                console.log("Brak w koszyku");
+            }
+        });
+
+
+    </script>
+</div>
+</body>
+</html>

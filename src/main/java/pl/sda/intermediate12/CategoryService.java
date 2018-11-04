@@ -1,9 +1,12 @@
 package pl.sda.intermediate12;
 
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+@Service//singleton by spring
 public class CategoryService {
     private InMemoryCategoryDAO inMemoryCategoryDAO = InMemoryCategoryDAO.getInstance();
 
@@ -15,13 +18,13 @@ public class CategoryService {
 
         return dtoMap.values().stream()
                 .peek(dto -> dto.setParentCat(dtoMap.get(dto.getParentId())))
-                .map(dto -> populateStateAndOpenParents(dto, searchText.trim()))
+                .map(dto -> populateStateAndOpenParents(dto, searchText))
                 .collect(Collectors.toList());
 
     }
 
     private CategoryDTO populateStateAndOpenParents(CategoryDTO dto, String searchText) {
-        if (dto.getName().equals(searchText)) {
+        if (searchText != null && dto.getName().equals(searchText)) {
             dto.getCategoryState().setOpen(true);
             dto.getCategoryState().setSelected(true);
             openParent(dto);

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Produkty</title>
+    <!-- 2 load the theme CSS file -->
+    <div th:replace="fragments/header :: header-css"/>
+</head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css"/>
+</head>
+<body>
+<div th:replace="fragments/header :: header"/>
+
+</tr>
+<div class="container">
+    <form action="/products">
+
+
+        <input type="text" name="searchText">
+
+        <button value="search">Szukaj</button>
+    </form>
+    <ul class="list-group" th:each="prod : ${products}">
+        <li class="product_item" th:text=" ${prod.id +', '+ prod.title}">Onions</li>
+        <button type="button" class="add_to_cart" th:onclick="'javascript:addToCart('+ ${prod.id}+');'">KUPUJĘ</button>
+    </ul>
+</div>
+
+
+<div th:replace="fragments/footer :: footer"></div>
+<script type="text/javascript">
+    var addToCart = function(prodId) {
+
+        $.post("/addToCart",{prodId:prodId}).success(function (data) {
+            $('#toReplace').html('')
+           var parse = JSON.parse(data);
+           console.log(parse)
+           var orderLines = parse.orderLines;
+           console.log(orderLines)
+           var items = '';
+           console.log($('#toReplace').html())
+           for (o in orderLines) {
+               console.log(o)
+               var orderLine = orderLines[o];
+               console.log(orderLine)
+               items += ("<li>"+orderLine.product.name+'('+orderLine.quantity+')'+"</li>")
+           }
+
+
+           $('#toReplace').html('').html(items);
+       })
+    }
+
+</script>
+</body>
+</html>
