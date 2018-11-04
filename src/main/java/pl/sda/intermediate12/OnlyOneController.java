@@ -26,6 +26,11 @@ public class OnlyOneController {
         return "catspage"; //takiego htmla bedzie szukac nasza aplikacja
     }
 
+    @RequestMapping(value = "/")
+    public String home (){
+        return "index";
+    }
+    
     @RequestMapping(value = "/example")
     @ResponseBody
     public String example () {
