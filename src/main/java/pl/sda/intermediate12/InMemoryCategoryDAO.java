@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+//singleton by hand
 public class InMemoryCategoryDAO {
     private static InMemoryCategoryDAO instance;
     @Getter

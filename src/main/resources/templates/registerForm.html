@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>REJESTRACJA</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <div th:replace="fragments/header :: header-css"></div>
+    <link rel="stylesheet" th:href="@{/css/signin.css}"/>
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+<form action="#" th:action="@{/register}" method="post" class="form-signin">
+
+
+    <label for="name">Imię:</label>
+
+    <input id="name" type="text" th:field="${form.firstName}"  autofocus class="form-control"/>
+    <p class="error" th:text="${firstNameValRes}"/>
+
+    <label for="surname">Nazwisko:</label>
+
+    <input id="surname" type="text" th:field="${form.lastName}"  autofocus class="form-control"/>
+    <p class="error" th:text="${lastNameValRes}"/>
+
+    <label for="zipcode">Kod pocztowy:</label>
+
+    <input id="zipcode" type="text" th:field="${form.userAddress.zipCode}"  autofocus class="form-control"/>
+    <p class="error" th:text="${zipCodeValRes}"/>
+
+    <label for="city">Miasto:</label>
+
+    <input id="city" type="text" th:field="${form.userAddress.city}"  autofocus class="form-control"/>
+    <p class="error" th:text="${cityValRes}"/>
+
+    <label for="country">Kraj:</label>
+    <select autofocus class="form-control" id="country" th:field="${form.userAddress.country}">
+        <option th:value="''" th:text="Wybierz"></option>
+        <option th:each="country : ${countries}" th:value="${country.symbol}" th:text="${country}"></option>
+    </select>
+    <p class="error" th:text="${countryValRes}"/>
+
+    <label for="street">Ulica:</label>
+    <input id="street" type="text" th:field="${form.userAddress.street}"  autofocus class="form-control"/>
+    <p class="error" th:text="${streetValRes}"/>
+
+    <label for="birth">Data urodzenia:</label>
+    <input id="birth" type="text" placeholder="yyyy-mm-dd" th:field="${form.birthDate}"  autofocus class="form-control"/>
+    <p class="error" th:text="${birthDataValRes}"/>
+
+    <label for="inputPesel"> PESEL:</label>
+    <input id="inputPesel" type="text"  autofocus class="form-control" th:field="${form.pesel}"/>
+    <p class="error" th:text="${peselValRes}"/>
+
+
+    <label for="inputEmail">Email </label>
+    <input type="email" id="inputEmail"  autofocus class="form-control" th:field="${form.email}"/>
+    <p class="error" th:text="${emailValRes}"/>
+
+
+    <label for="passw">Hasło:</label>
+
+    <input id="passw" type="text" th:field="${form.password}"  autofocus class="form-control"/>
+    <p class="error" th:text="${passwordValRes}"/>
+
+    <label for="phone">Numer Telefonu:</label>
+
+    <input id="phone" type="text" th:field="${form.phone}"  autofocus class="form-control"/>
+    <p class="error" th:text="${phoneValRes}"/>
+
+    <input id="mailing" type="checkbox" th:field="${form.preferEmails}"/>
+    <label for="mailing">Chcę otrzymywać informacje listownie</label>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Utwórz konto</button>
+
+
+
+    <p class="error" th:text="${userExistsException}"/>
+    <div th:replace="fragments/footer :: footer"></div>
+</form>
+
+</body>
+</html>
