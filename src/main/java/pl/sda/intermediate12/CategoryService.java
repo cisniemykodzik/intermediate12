@@ -1,6 +1,7 @@
 package pl.sda.intermediate12;
 
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class CategoryService {
@@ -8,9 +9,12 @@ public class CategoryService {
 
     public List<CategoryDTO> filterCategories(String searchText) {
         List<Category> categoryList = inMemoryCategoryDAO.getCategoryList();
-        return categoryList.stream()
+        Map<Integer,CategoryDTO> dtoMap = categoryList.stream()
                 .map(c -> buildCategoryDTO(c))
-                .peek(dto -> dto.setParentCat(findParent(dto.getParentId())))
+                .collect(Collectors.toMap(k->k.getId(),v->v));
+
+        return dtoMap.values().stream()
+                .peek(dto -> dto.setParentCat(dtoMap.get(dto.getParentId())))
                 .map(dto -> populateStateAndOpenParents(dto, searchText.trim()))
                 .collect(Collectors.toList());
 
@@ -32,17 +36,6 @@ public class CategoryService {
         }
         parentCat.getCategoryState().setOpen(true);
         openParent(parentCat);
-    }
-
-    private CategoryDTO findParent(Integer parentId) {
-        List<Category> categoryList = inMemoryCategoryDAO.getCategoryList();
-        return categoryList.stream()
-                .filter(f -> f.getId().equals(parentId))
-                .findFirst()
-                .map(m -> buildCategoryDTO(m))
-                .orElse(null);
-
-
     }
 
     private CategoryDTO buildCategoryDTO(Category c) {
