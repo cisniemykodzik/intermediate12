@@ -24,7 +24,7 @@ public class CategoryService {
     }
 
     private CategoryDTO populateStateAndOpenParents(CategoryDTO dto, String searchText) {
-        if (searchText != null && dto.getName().equals(searchText)) {
+        if (searchText != null && dto.getName().equals(searchText.trim())) {
             dto.getCategoryState().setOpen(true);
             dto.getCategoryState().setSelected(true);
             openParent(dto);
