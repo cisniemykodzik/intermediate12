@@ -23,23 +23,23 @@
 
     <label for="zipcode">Kod pocztowy:</label>
 
-    <input id="zipcode" type="text" th:field="${form.userAddress.zipCode}"  autofocus class="form-control"/>
+    <input id="zipcode" type="text" th:field="${form.zipCode}"  autofocus class="form-control"/>
     <p class="error" th:text="${zipCodeValRes}"/>
 
     <label for="city">Miasto:</label>
 
-    <input id="city" type="text" th:field="${form.userAddress.city}"  autofocus class="form-control"/>
+    <input id="city" type="text" th:field="${form.city}"  autofocus class="form-control"/>
     <p class="error" th:text="${cityValRes}"/>
 
     <label for="country">Kraj:</label>
-    <select autofocus class="form-control" id="country" th:field="${form.userAddress.country}">
+    <select autofocus class="form-control" id="country" th:field="${form.country}">
         <option th:value="''" th:text="Wybierz"></option>
         <option th:each="country : ${countries}" th:value="${country.symbol}" th:text="${country}"></option>
     </select>
     <p class="error" th:text="${countryValRes}"/>
 
     <label for="street">Ulica:</label>
-    <input id="street" type="text" th:field="${form.userAddress.street}"  autofocus class="form-control"/>
+    <input id="street" type="text" th:field="${form.street}"  autofocus class="form-control"/>
     <p class="error" th:text="${streetValRes}"/>
 
     <label for="birth">Data urodzenia:</label>
@@ -52,7 +52,7 @@
 
 
     <label for="inputEmail">Email </label>
-    <input type="email" id="inputEmail"  autofocus class="form-control" th:field="${form.email}"/>
+    <input type="email" id="inputEmail"  autofocus class="form-control" th:field="${form.EMail}"/>
     <p class="error" th:text="${emailValRes}"/>
 
 
@@ -73,7 +73,7 @@
 
 
 
-    <p class="error" th:text="${userExistsException}"/>
+    <p class="error" th:text="${userExistsExceptionMessage}"/>
     <div th:replace="fragments/footer :: footer"></div>
 </form>
 

@@ -8,6 +8,8 @@ import java.util.Map;
 
 @Service
 public class UserValidationService {
+    
+    //todo naprawic walidacje -> by faktycznie zwracala bledy gdy trzeba + napisac testy (mega wazne)
     public Map<String, String> validateUser(UserRegistrationDTO dto) {
         Map<String, String> errorsMap = new HashMap<>();
         if (StringUtils.isBlank(dto.getFirstName()) ||

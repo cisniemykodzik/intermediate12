@@ -33,7 +33,7 @@ public class UserRegistrationService {
         userAddress.setZipCode(userRegistrationDTO.getZipCode());
 
         user.setUserAddress(userAddress);
-        //fixme
+        //todo -> uzupenic pozostale pola
         return user;
     }
 }

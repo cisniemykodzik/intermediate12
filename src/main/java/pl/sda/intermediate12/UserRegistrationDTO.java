@@ -17,5 +17,5 @@ public class UserRegistrationDTO {
     private String birthDate;
     private String pesel;
     private String phone;
-
+    private boolean preferEmails;
 }
