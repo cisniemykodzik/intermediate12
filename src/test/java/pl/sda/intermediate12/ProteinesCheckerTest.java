@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 import static java.util.stream.Collectors.toList;
 
-public class ProteinesChecker {
+public class ProteinesCheckerTest {
     @RepeatedTest(1)
     public void parseAndCheck() {
         for (int i =1;i<100000;i++) {
