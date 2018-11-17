@@ -56,7 +56,7 @@ public class OnlyOneController {
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public String registerEffect(UserRegistrationDTO userRegistrationDTO, Model model) {
-        Map<String, String> errorsMap = new UserValidationService().validateUser(userRegistrationDTO);
+        Map<String, String> errorsMap = userValidationService.validateUser(userRegistrationDTO);
         model.addAttribute("form", userRegistrationDTO); // tu zamiast nulla należy dodać dto z danymi usera ->
         model.addAttribute("countries", Countries.values()); // zamiast nulla przekazanie kolekcji enumow
         if (errorsMap.isEmpty()) {
