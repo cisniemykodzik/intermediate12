@@ -9,7 +9,11 @@ public class User {
     private String firstName;
     private String lastName;
     private String eMail;
-    private String password;
+    private String passwordHash;
     private UserAddress userAddress;
+    private String birthDate;
+    private String pesel;
+    private String phone;
+    private boolean preferEmails;
 
 }

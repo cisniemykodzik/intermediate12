@@ -7,7 +7,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CategoryServiceTest {
+public class CategoryServiceTest {
     @Test
     public void shouldOpenParentsOfSearchedCategories() {
         List<Integer> openCategories = Lists.newArrayList(1, 4, 6);

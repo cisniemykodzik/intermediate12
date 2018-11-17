@@ -12,15 +12,14 @@ public class CategoryService {
 
     public List<CategoryDTO> filterCategories(String searchText) {
         List<Category> categoryList = inMemoryCategoryDAO.getCategoryList();
-        Map<Integer,CategoryDTO> dtoMap = categoryList.stream()
+        Map<Integer, CategoryDTO> dtoMap = categoryList.stream()
                 .map(c -> buildCategoryDTO(c))
-                .collect(Collectors.toMap(k->k.getId(),v->v));
+                .collect(Collectors.toMap(k -> k.getId(), v -> v));
 
         return dtoMap.values().stream()
                 .peek(dto -> dto.setParentCat(dtoMap.get(dto.getParentId())))
                 .map(dto -> populateStateAndOpenParents(dto, searchText))
                 .collect(Collectors.toList());
-
     }
 
     private CategoryDTO populateStateAndOpenParents(CategoryDTO dto, String searchText) {

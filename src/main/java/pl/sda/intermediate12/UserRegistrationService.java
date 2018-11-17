@@ -24,7 +24,7 @@ public class UserRegistrationService {
         user.setFirstName(userRegistrationDTO.getFirstName());
         user.setLastName(userRegistrationDTO.getLastName());
         user.setEMail(userRegistrationDTO.getEMail());
-        user.setPassword(DigestUtils.sha512Hex(userRegistrationDTO.getPassword()));
+        user.setPasswordHash(DigestUtils.sha512Hex(userRegistrationDTO.getPassword()));
 
         UserAddress userAddress = new UserAddress();
         userAddress.setCity(userRegistrationDTO.getCity());
@@ -33,7 +33,11 @@ public class UserRegistrationService {
         userAddress.setZipCode(userRegistrationDTO.getZipCode());
 
         user.setUserAddress(userAddress);
-        //fixme
+        user.setBirthDate(userRegistrationDTO.getBirthDate());
+        user.setPesel(userRegistrationDTO.getPesel());
+        user.setPhone(userRegistrationDTO.getPhone());
+        user.setPreferEmails(userRegistrationDTO.isPreferEmails());
+        // -> uzupenic pozostale pola
         return user;
     }
 }
