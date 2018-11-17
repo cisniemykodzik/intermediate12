@@ -1,21 +1,19 @@
-package pl.sda.intermediate12;
+package pl.sda.intermediate12.users;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class UserRegistrationDTO {
+public class User {
     private String firstName;
     private String lastName;
     private String eMail;
-    private String password;
-    private String city;
-    private String country;
-    private String zipCode;
-    private String street;
+    private String passwordHash;
+    private UserAddress userAddress;
     private String birthDate;
     private String pesel;
     private String phone;
     private boolean preferEmails;
+
 }

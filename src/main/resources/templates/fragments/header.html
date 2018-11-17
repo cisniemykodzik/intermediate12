@@ -18,7 +18,8 @@
         <a href="/products">Produkty</a>
         <a href="/login">Login</a>
         <a ref="/logout" style="float: right;color: white">Wyloguj</a>
-
+        <p style="color: white;"
+           th:text="${@userContextHolder.getUserLoggedIn()}"></p>
         <!--<div style="float: right" id="openweathermap-widget">-->
 
         <!--<link href="//openweathermap.org/themes/openweathermap/assets/vendor/owm/css/openweathermap-widget-right.min.css"-->

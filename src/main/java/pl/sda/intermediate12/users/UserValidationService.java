@@ -1,4 +1,4 @@
-package pl.sda.intermediate12;
+package pl.sda.intermediate12.users;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;

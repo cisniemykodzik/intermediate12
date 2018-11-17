@@ -1,6 +1,5 @@
-package pl.sda.intermediate12;
+package pl.sda.intermediate12.users;
 
-import com.google.common.collect.Lists;
 import lombok.Getter;
 import org.springframework.stereotype.Service;
 

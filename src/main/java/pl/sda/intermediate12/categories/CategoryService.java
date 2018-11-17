@@ -1,4 +1,4 @@
-package pl.sda.intermediate12;
+package pl.sda.intermediate12.categories;
 
 import org.springframework.stereotype.Service;
 

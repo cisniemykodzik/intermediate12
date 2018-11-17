@@ -1,4 +1,4 @@
-package pl.sda.intermediate12;
+package pl.sda.intermediate12.users;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;

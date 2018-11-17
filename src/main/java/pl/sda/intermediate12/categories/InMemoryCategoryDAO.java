@@ -1,7 +1,6 @@
-package pl.sda.intermediate12;
+package pl.sda.intermediate12.categories;
 
 
-import lombok.AccessLevel;
 import lombok.Getter;
 
 import java.io.IOException;

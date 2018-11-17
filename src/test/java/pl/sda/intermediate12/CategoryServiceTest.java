@@ -2,6 +2,8 @@ package pl.sda.intermediate12;
 
 import com.google.common.collect.Lists;
 import org.junit.jupiter.api.Test;
+import pl.sda.intermediate12.categories.CategoryDTO;
+import pl.sda.intermediate12.categories.CategoryService;
 
 import java.util.List;
 

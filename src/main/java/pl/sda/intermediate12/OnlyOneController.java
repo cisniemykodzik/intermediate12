@@ -1,6 +1,5 @@
 package pl.sda.intermediate12;
 
-import com.google.common.collect.Maps;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,6 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import pl.sda.intermediate12.categories.CategoryDTO;
+import pl.sda.intermediate12.categories.CategoryService;
+import pl.sda.intermediate12.users.*;
 
 import java.util.List;
 import java.util.Map;
@@ -23,6 +25,8 @@ public class OnlyOneController {
     private UserValidationService userValidationService;
     @Autowired
     private UserDAO userDAO;
+    @Autowired
+    private UserContextHolder userContextHolder;
 
     @RequestMapping(value = "/categories")
     public String categories(@RequestParam(required = false) String searchText, Model model) {
@@ -83,6 +87,7 @@ public class OnlyOneController {
                 .map(u -> u.getPasswordHash().equals(DigestUtils.sha512Hex(userLoginDTO.getPassword())))
                 .orElse(false);
         if (loggedIn) {
+            userContextHolder.logUser(userLoginDTO.getLogin());
             return "index";
         } else {
             model.addAttribute("form", new UserLoginDTO());
