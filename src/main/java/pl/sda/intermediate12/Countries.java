@@ -1,8 +1,8 @@
 package pl.sda.intermediate12;
 
 import lombok.Getter;
-
-//todo jakos trzeba sie dostac do danych
+@Getter
+// jakos trzeba sie dostac do danych
 public enum Countries {
     USA("Stany zjednoczone", "US"),
     POLAND("Polska", "PL"),

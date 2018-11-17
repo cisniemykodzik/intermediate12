@@ -5,10 +5,10 @@ import pl.sda.intermediate12.threads.bank.Bank;
 import pl.sda.intermediate12.threads.bank.ClientActionRunnable;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class ThreadsExample {
-
 
     @Test
     void bankExampleSynchronized(){

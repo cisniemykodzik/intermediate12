@@ -44,7 +44,7 @@
 
     <label for="birth">Data urodzenia:</label>
     <input id="birth" type="text" placeholder="yyyy-mm-dd" th:field="${form.birthDate}"  autofocus class="form-control"/>
-    <p class="error" th:text="${birthDataValRes}"/>
+    <p class="error" th:text="${birthDateValRes}"/>
 
     <label for="inputPesel"> PESEL:</label>
     <input id="inputPesel" type="text"  autofocus class="form-control" th:field="${form.pesel}"/>
