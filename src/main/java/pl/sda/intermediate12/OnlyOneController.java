@@ -1,6 +1,7 @@
 package pl.sda.intermediate12;
 
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -53,7 +54,6 @@ public class OnlyOneController {
         return "registerForm"; // -> nazwa htmla
     }
 
-
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public String registerEffect(UserRegistrationDTO userRegistrationDTO, Model model) {
         Map<String, String> errorsMap = userValidationService.validateUser(userRegistrationDTO);
@@ -94,8 +94,5 @@ public class OnlyOneController {
             model.addAttribute("error", "Błąd logowania");
             return "loginForm";
         }
-
     }
-
-
 }

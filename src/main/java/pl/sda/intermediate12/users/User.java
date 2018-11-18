@@ -18,5 +18,4 @@ public class User implements Serializable {
     private String pesel;
     private String phone;
     private boolean preferEmails;
-
 }

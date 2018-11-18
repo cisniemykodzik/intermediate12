@@ -14,7 +14,6 @@ public class UserRegistrationService {
         if ( userDao.checkIfUserExist(userRegistrationDTO.getEMail())){
             throw new UserExistsException("User exists!!");
         }
-
         userDao.saveUser(rewriteDTOToUser(userRegistrationDTO));
     }
 

@@ -11,14 +11,13 @@
 <div th:fragment="header">
     <!-- this is header -->
     <div class="topnav">
-        <a href="/categories">Kategorie</a>
-
-
-        <a href="/register">Rejestracja</a>
-        <a href="/products">Produkty</a>
-        <a href="/login">Login</a>
-        <a ref="/logout" style="float: right;color: white">Wyloguj</a>
-        <p style="color: white;"
+        <a  th:if="${@userContextHolder.getUserLoggedIn()}"  href="/categories">Kategorie</a>
+        <a th:if="!${@userContextHolder.getUserLoggedIn()}" href="/register">Rejestracja</a>
+        <a th:if="${@userContextHolder.getUserLoggedIn()}" href="/products">Produkty</a>
+        <a th:if="!${@userContextHolder.getUserLoggedIn()}" href="/login">Login</a>
+        <a th:if="${@userContextHolder.getUserLoggedIn()}" href="/logout" style="float: right;color: white">Wyloguj</a>
+        <p style="color: white;float: right"
+           th:if="${@userContextHolder.getUserLoggedIn()}"
            th:text="${@userContextHolder.getUserLoggedIn()}"></p>
         <!--<div style="float: right" id="openweathermap-widget">-->
 
