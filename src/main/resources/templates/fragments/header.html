@@ -19,33 +19,33 @@
         <p style="color: white;float: right"
            th:if="${@userContextHolder.getUserLoggedIn()}"
            th:text="${@userContextHolder.getUserLoggedIn()}"></p>
-        <!--<div style="float: right" id="openweathermap-widget">-->
+        <div style="float: right" id="openweathermap-widget">
 
-        <!--<link href="//openweathermap.org/themes/openweathermap/assets/vendor/owm/css/openweathermap-widget-right.min.css"-->
-        <!--rel="stylesheet">-->
-        <!--<div class="widget-right widget-right&#45;&#45;type4 widget-right&#45;&#45;brown">-->
-        <!--<div class="widget-right__layout widget-right__layout&#45;&#45;brown">-->
-        <!--<div class="widget-right-card">-->
-        <!--<div class="widget-right__title"></div>-->
-        <!--<div class="widget-right__description"></div>-->
-        <!--</div>-->
-        <!--<img id="weather-image" src=""-->
-        <!--width="100"-->
-        <!--class="weather-right__icon weather-right__icon&#45;&#45;type4 weather-right__icon&#45;&#45;brown">-->
-        <!--<table class="weather-right-card">-->
-        <!--<tbody>-->
-        <!--<tr class="weather-right-card__items">-->
-        <!--<td class="weather-right-card__item weather-right-card__temperature-min">-->
-        <!--min<span>°C</span></td>-->
-        <!--<td class="weather-right-card__item weather-right-card__temperature-max">-->
-        <!--max<span>°C</span></td>-->
-        <!--</tr>-->
-        <!--</tbody>-->
-        <!--</table>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--<p style="float: right;color: white" id="weather"></p>-->
+            <link href="//openweathermap.org/themes/openweathermap/assets/vendor/owm/css/openweathermap-widget-right.min.css"
+                  rel="stylesheet">
+            <div class="widget-right widget-right--type4 widget-right--brown">
+                <div class="widget-right__layout widget-right__layout--brown">
+                    <div class="widget-right-card">
+                        <div class="widget-right__title"></div>
+                        <div class="widget-right__description"></div>
+                    </div>
+                    <img id="weather-image" src=""
+                         width="100"
+                         class="weather-right__icon weather-right__icon--type4 weather-right__icon--brown">
+                    <table class="weather-right-card">
+                        <tbody>
+                        <tr class="weather-right-card__items">
+                            <td class="weather-right-card__item weather-right-card__temperature-min">
+                                min<span>°C</span></td>
+                            <td class="weather-right-card__item weather-right-card__temperature-max">
+                                max<span>°C</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <p style="float: right;color: white" id="weather"></p>
 
     </div>
     <!--<div style="float: right" id="cartWidget">-->
