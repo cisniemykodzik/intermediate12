@@ -2,6 +2,7 @@ package pl.sda.intermediate12;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import pl.sda.intermediate12.categories.CategoryDTO;
 import pl.sda.intermediate12.categories.CategoryService;
 import pl.sda.intermediate12.users.*;
+import pl.sda.intermediate12.weather.model.WeatherResult;
+import pl.sda.intermediate12.weather.services.WeatherService;
 
 import java.util.List;
 import java.util.Map;
@@ -97,5 +100,12 @@ public class OnlyOneController {
 
     }
 
+    @RequestMapping(value = "/weather", method = RequestMethod.GET)
+    @ResponseBody//wysyła dane a nie szuka htmla
+    public ResponseEntity<String> weather() {
+        WeatherService weatherService = new WeatherService();
+        return ResponseEntity.ok(weatherService.getWeather());
+
+    }
 
 }

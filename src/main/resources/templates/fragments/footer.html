@@ -17,6 +17,7 @@
     </div>
     <script>
         var openweathermap = $("#openweathermap-widget");
+        console.log("W")
         $.getJSON("/weather")
             .success(
                 function (response) {
@@ -36,29 +37,29 @@
             )
 
 
-        $(function () {
-            console.log("sagrg")
-        })
-        $.ajax({
-            url: "/cartElements",
-
-            type: "GET",
-            dataType: "json",
-            success: function (data) {
-                var orderLines = data.orderLines;
-                var items = "";
-                for (o in orderLines) {
-                    console.log("FAGGR"+o);
-                    items += items.concat("<li>"+o.product.name+"</li>")
-                }
-
-
-                $('#toReplace').html(items);
-            },
-            error: function (data) {
-                console.log("Brak w koszyku");
-            }
-        });
+        // $(function () {
+        //     console.log("sagrg")
+        // })
+        // $.ajax({
+        //     url: "/cartElements",
+        //
+        //     type: "GET",
+        //     dataType: "json",
+        //     success: function (data) {
+        //         var orderLines = data.orderLines;
+        //         var items = "";
+        //         for (o in orderLines) {
+        //             console.log("FAGGR"+o);
+        //             items += items.concat("<li>"+o.product.name+"</li>")
+        //         }
+        //
+        //
+        //         $('#toReplace').html(items);
+        //     },
+        //     error: function (data) {
+        //         console.log("Brak w koszyku");
+        //     }
+        // });
 
 
     </script>
