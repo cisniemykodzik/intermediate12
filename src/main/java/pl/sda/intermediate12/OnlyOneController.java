@@ -98,8 +98,6 @@ public class OnlyOneController {
             return "loginForm";
         }
     }
-<<<<<<< HEAD
-=======
 
     @RequestMapping(value = "/weather", method = RequestMethod.GET)
     @ResponseBody//wysyła dane a nie szuka htmla
@@ -109,5 +107,4 @@ public class OnlyOneController {
 
     }
 
->>>>>>> develop
 }
