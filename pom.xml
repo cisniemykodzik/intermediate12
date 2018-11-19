@@ -23,7 +23,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>pl.sda.intermediate12.Main</mainClass>
+                            <mainClass>pl.sda.intermediate12.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
