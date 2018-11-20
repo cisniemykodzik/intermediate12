@@ -26,7 +26,7 @@ public class InMemoryCategoryDAO {
 
     private List<Category> initializeCategories() {
         try {
-            List<String> strings = Resources.readLines(Resources.getResource("kategorie.txt"), Charset.forName("UNICODE"));
+            List<String> strings = Resources.readLines(Resources.getResource("kategorie2.txt"), Charset.forName("UNICODE"));
             List<Category> categories = new ArrayList<>();
 
             int counter = 1;
