@@ -1,1 +1,1 @@
-web java -Dserver.port=$PORT $JAVA_OPTS -jar target/awesome-movies-client-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev
+web java -Dserver.port=$PORT $JAVA_OPTS -jar target/intermediate12-1.0-SNAPSHOT.jar
