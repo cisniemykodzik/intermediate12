@@ -1,6 +1,7 @@
 package pl.sda.intermediate12.categories;
 
 
+import com.google.common.io.Resources;
 import lombok.Getter;
 
 import java.io.IOException;
@@ -25,9 +26,7 @@ public class InMemoryCategoryDAO {
 
     private List<Category> initializeCategories() {
         try {
-            List<String> strings = Files.readAllLines(Paths.get(
-                    this.getClass().getClassLoader()
-                            .getResource("kategorie.txt").toURI()), Charset.forName("UNICODE"));
+            List<String> strings = Resources.readLines(Resources.getResource("kategorie.txt"), Charset.forName("UNICODE"));
             List<Category> categories = new ArrayList<>();
 
             int counter = 1;
@@ -51,7 +50,7 @@ public class InMemoryCategoryDAO {
             }
             populateParentID(categoryMap, 0);
             return categories;
-        } catch (IOException | URISyntaxException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return null;
