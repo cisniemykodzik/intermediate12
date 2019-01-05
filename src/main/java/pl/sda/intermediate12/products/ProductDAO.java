@@ -1,6 +1,7 @@
 package pl.sda.intermediate12.products;
 
 import org.apache.commons.dbcp2.BasicDataSource;
+import org.apache.commons.lang3.NotImplementedException;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -48,6 +49,62 @@ public class ProductDAO {
             e.printStackTrace();
         }
         return productDTOList;
+    }
+
+    private List<Product> parseProductDTOListtoProductDTOList (List<ProductDTO> productDTOList){
+        List<Product> productList = new ArrayList<>();
+
+        for (ProductDTO productDTO : productDTOList) {
+            productList.add(parseProductDTOtoProduct(productDTO));
+        }
+
+        return productList;
+    }
+
+    private Product parseProductDTOtoProduct (ProductDTO productDTO){
+        Product product = new Product();
+        product.setAuthor(returnOrCreateNewAuthor(productDTO.getAuthor()));
+        // TODO
+        return null;
+    }
+
+    private Author returnOrCreateNewAuthor (String lastNameComaSpaceAndFirstName){
+        String firstName ="";
+        String lastName = "";
+        // TODO
+        if(checkIfAuthorExists(firstName, lastName)){
+            // TODO
+        }
+        return null;
+    }
+
+    private boolean checkIfAuthorExists (String firstName, String lastName){
+        // TODO
+        // dla celów edukacyjnych na razie naiwnie zakładamy, że istnieje tylko jeden autor o danym imieniu i nazwisku
+        throw new NotImplementedException("no implementation");
+    }
+
+    public void addProduct (List<Product> productList){
+        for (Product product : productList) {
+            addProductToDatabase (product);
+        }
+    }
+
+    public void addProductToDatabase (Product product){
+        Connection connection = null;
+        // TODO
+        // użyć metody checkIfProductExists
+    }
+
+    public Product getProduct (String id){
+        // TODO
+        //  możemy się jeszcze zastanowić po jakich parametrach chcemy wyszukiwać produkty w bazie danych,
+        //  aczkolwiek ta jedna metoda będzie nam potrzebna do testów
+        return null;
+    }
+    private boolean checkIfProductExists (Product product){
+        // TODO
+        throw new NotImplementedException("no implementation");
     }
 
     private static Connection getConnection() throws SQLException {

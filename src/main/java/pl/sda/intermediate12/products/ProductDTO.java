@@ -8,6 +8,7 @@ import lombok.*;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode
 public class ProductDTO {
     private String id;
     private String author;
