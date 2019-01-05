@@ -1,12 +1,16 @@
 package pl.sda.intermediate12.users;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.io.Serializable;
 
 @Getter
 @Setter
+@ToString(exclude = "passwordHash")
+@EqualsAndHashCode
 public class User implements Serializable {
     private static final long serialVersionUID = -2911074201859688764L;
     private String firstName;

@@ -6,8 +6,7 @@ import org.springframework.stereotype.Service;
 
 import javax.sql.DataSource;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @Getter
 @Service
@@ -21,12 +20,13 @@ public class UserDAO {
         Connection connection = null;
         try {
             connection = getConnection();
-            String sql = "SELECT * FROM users;";
+            String sql = "SELECT * FROM users LEFT JOIN useraddresses ON users.userId = useraddresses.userID;";
             PreparedStatement ps = connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 User nextUser = new User();
-                int userId = rs.getInt(1);
+                UserAddress nextUserAddress = new UserAddress();
+//                int userId = rs.getInt(1);
                 nextUser.setFirstName(rs.getString(2));
                 nextUser.setLastName(rs.getString(3));
                 nextUser.setEMail(rs.getString(4));
@@ -35,7 +35,13 @@ public class UserDAO {
                 nextUser.setPesel(rs.getString(7));
                 nextUser.setPhone(rs.getString(8));
                 nextUser.setPreferEmails(rs.getBoolean(9));
-                nextUser.setUserAddress(getUserAddress(userId, connection));
+                rs.getInt(10);
+                if(rs.wasNull()){
+                nextUserAddress.setCity(rs.getString(12));
+                nextUserAddress.setCountry(rs.getString(13));
+                nextUserAddress.setZipCode(rs.getString(14));
+                nextUserAddress.setStreet(rs.getString(15));
+                nextUser.setUserAddress(nextUserAddress);}
                 users.add(nextUser);
             }
         } catch (SQLException e) {
@@ -46,6 +52,57 @@ public class UserDAO {
                     connection.close();
                 }
             } catch (SQLException e) {
+            }
+        }
+        return users;
+    }
+
+    public List<User> getUserListAlternative(){
+        Map<Integer, User> usersWithIds = new LinkedHashMap<>();
+        List<User> users = new ArrayList<>();
+        Connection connection = null;
+
+        try {
+            connection = getConnection();
+            String sql = "SELECT * FROM users;";
+            PreparedStatement psu = connection.prepareStatement(sql);
+            ResultSet rs = psu.executeQuery();
+            while (rs.next()) {
+                User nextUser = new User();
+
+                int userId = rs.getInt(1);
+                nextUser.setFirstName(rs.getString(2));
+                nextUser.setLastName(rs.getString(3));
+                nextUser.setEMail(rs.getString(4));
+                nextUser.setPasswordHash((rs.getString(5)));
+                nextUser.setBirthDate(rs.getString(6));
+                nextUser.setPesel(rs.getString(7));
+                nextUser.setPhone(rs.getString(8));
+                nextUser.setPreferEmails(rs.getBoolean(9));
+                usersWithIds.put(userId,nextUser);
+            }
+            String sqlAddresses = "SELECT * FROM useraddresses;";
+            PreparedStatement psa = connection.prepareStatement(sqlAddresses);
+            ResultSet rsa = psa.executeQuery();
+            while (rsa.next()){
+                UserAddress nextUserAddress = new UserAddress();
+                int userId = rsa.getInt(2);
+                nextUserAddress.setCity(rsa.getString(3));
+                nextUserAddress.setCountry(rsa.getString(4));
+                nextUserAddress.setZipCode(rsa.getString(5));
+                nextUserAddress.setStreet(rsa.getString(6));
+                usersWithIds.get(userId).setUserAddress(nextUserAddress);
+            }
+            users.addAll(usersWithIds.values());
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null && !connection.isClosed()){
+                    connection.close();
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
             }
         }
         return users;
@@ -91,10 +148,11 @@ public class UserDAO {
                     connection.close();
             } catch (SQLException e) {
             }
+
         }
     }
 
-    public void saveUserAddress(UserAddress userAddress, int userId, Connection connection) {
+    private void saveUserAddress(UserAddress userAddress, int userId, Connection connection) {
         if (connection != null) {
             try {
                 String sqlInsertAddress = "INSERT INTO useraddresses (userId, city, country, zipCode, street) " +
